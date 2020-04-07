@@ -1,0 +1,27 @@
+興味を持ってこのトピックを見ていただいた皆様。無事に解決しました。
+
+自分はテンプレートの出力先フォルダに上がっている.zipファイルを解凍して、その内容を調べました。
+解凍したフォルダには.vstemplateとして「MyTemplate.vstemplate」と「SimpleProjectTemplate.vstemplate」の2つが出来ていました。
+
+自分はこのうちMyTemplate.vstempateを削除してSimpleProjecteTemplate.vstemplateファイルの<TemplateData>セクションに定義されている「$safeprojectname$」を、実際のテンプレート名である「SimpleProjecteTemplate」に置き換えました。
+その後で改めてこのフォルダを.zipファイルに圧縮してプロジェクトテンプレートフォルダに配置したところ、無事「Create a new Project」ダイアログに表示されるようになりました。
+
+ところで、元の.zipファイルに入っていた「MyTemplate.vstemplate」というのは自分が作成したものではありません。Project Templateを作成して必要な修正を加えてからプロジェクトメニューの「テンプレートのエクスポート」を実行した結果として作成される.zipファイルに自動的に入っています。
+
+自分の考えでは現在のテンプレートのエクスポートメニューが実行する.zipファイルの内容と、Visual Studioが認識するテンプレートフォルダ内の.zipファイルの形式が上手くマッチしていないような気がします。
+
+--------
+To everyone who has looked at this topic with interest, I inform the problem was solved.
+
+I unzipped the .zip file in the output folder of the template and examined its contents.
+There were two .vstemplate files, [MyTemplate.vstemplate] and [SimpleProjectTemplate.vstemplate] in the unzipped folder.
+
+First, I deleted [MyTemplate.vstempate] file. Then I replaced "$safeprojectname$" defined in <TemplateData> section of [SimpleProjecteTemplate.vstemplate] file with "SimpleProjecteTemplate", which is the actual template name.
+
+After that, I compressed this folder into a .zip file and placed it in the project template folder, and it came to be displayed in the "Create a new Project" dialog.
+
+By the way, the [MyTemplate.vstemplate] in the original .zip file was not created by me, it is automatically contained in the .zip file created by "Creating Project Template" instruction in the "Project" menu.I myself did not make any modification on it.
+
+In my opinion, the .zip file content in the current template export menu and the .zip file format in the template folder recognized by Visual Studio do not match well.
+
+That's all. Thank you.
